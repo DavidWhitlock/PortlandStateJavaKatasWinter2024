@@ -6,7 +6,7 @@
     <groupId>edu.pdx.cs410J.katas</groupId>
     <version>1.0.0</version>
   </parent>
-  <artifactId>diamon-parent</artifactId>
+  <artifactId>diamond-parent</artifactId>
   <version>1.0.0</version>
 
   <packaging>pom</packaging>
