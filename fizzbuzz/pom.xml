@@ -11,7 +11,7 @@
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>Kata Project</name>
+  <name>Fizz Buzz Project</name>
   <description>A simple project for getting started with code fizzbuzzs</description>
   <url>http://www.cs.pdx.edu</url>
 

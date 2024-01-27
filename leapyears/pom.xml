@@ -10,7 +10,7 @@
   <version>1.0.0</version>
 
   <packaging>pom</packaging>
-  <name>Leap Years Kata Winter 2024</name>
+  <name>Leap Years Katas Winter 2024</name>
 
   <modules>
     <module>pair1</module>
