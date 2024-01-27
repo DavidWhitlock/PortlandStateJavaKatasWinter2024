@@ -2,16 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <artifactId>cs410j</artifactId>
-    <groupId>io.github.davidwhitlock.cs410J</groupId>
-    <version>2024.0.0</version>
+    <artifactId>diamon-parent</artifactId>
+    <groupId>edu.pdx.cs410J.katas</groupId>
+    <version>1.0.0</version>
   </parent>
   <groupId>edu.pdx.cs410J.pair1</groupId>
   <artifactId>diamond</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>Kata Project</name>
+  <name>Diamond Kata Pair 1</name>
   <description>A simple project for getting started with code diamonds</description>
   <url>http://www.cs.pdx.edu</url>
 
