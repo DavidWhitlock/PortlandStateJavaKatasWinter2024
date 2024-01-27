@@ -14,12 +14,12 @@ accordingly
     <groupId>io.github.davidwhitlock.cs410J</groupId>
     <version>2024.0.0</version>
   </parent>
-  <groupId>edu.pdx.cs410J.YourUserId</groupId>
-  <artifactId>PortlandStateJava</artifactId>
+  <groupId>edu.pdx.cs410J.katas</groupId>
+  <artifactId>PortlandStateJavaKatasWinter2022</artifactId>
   <version>1.0.0</version>
 
   <packaging>pom</packaging>
-  <name>PSUJavaWinter2024</name>
+  <name>PSU Java Katas Winter 2024</name>
   <description>Source code written in the Winter 2024 offering of Contemporary Software Development</description>
   <url>http://YourGitHubUserInLowerCase.github.io/PortlandStateJavaWinter2024</url>
 
