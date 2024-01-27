@@ -15,6 +15,7 @@
   <modules>
     <module>pair1</module>
     <module>pair2</module>
+    <module>pair3</module>
   </modules>
 
 </project>
