@@ -19,6 +19,9 @@ public class FizzBuzz {
     if (number > 100) {
       throw new IllegalArgumentException("Number is too large");
     }
+    if (number < 0) {
+      throw new IllegalArgumentException("Number is too small");
+    }
     if (number%3 == 0 && number%5 == 0) {
       return "FizzBuzz";
     }
