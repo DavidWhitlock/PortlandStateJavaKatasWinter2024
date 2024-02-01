@@ -4,6 +4,10 @@ import org.junit.jupiter.api.Test;
 
 public class LeapYearsTest
 {
+  @Test
+  void numberLessThan0PrintsErrorToStandardError() {
+
+  }
 
   @Test
   void canInstantiateKataClass() {
