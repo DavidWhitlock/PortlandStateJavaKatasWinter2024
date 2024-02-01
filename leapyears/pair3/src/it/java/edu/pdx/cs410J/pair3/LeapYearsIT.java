@@ -20,4 +20,10 @@ class LeapYearsIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardOut(), containsString("Is a Leap Year!"));
   }
 
+  @Test
+  void notANumberArg(){
+    InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, "word");
+    assertThat(result.getTextWrittenToStandardError(), containsString("Not a number"));
+  }
+
 }

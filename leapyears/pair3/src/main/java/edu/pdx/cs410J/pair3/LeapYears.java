@@ -17,11 +17,13 @@ public class LeapYears {
       return;
     }
 
-    Integer year = Integer.parseInt(args[0]);
-    if (year != null) {
+    try {
+      Integer year = Integer.parseInt(args[0]);
       if(isLeapYear(year)) {
         System.out.println("Is a Leap Year!");
       }
+    } catch (NumberFormatException e){
+      System.err.println("Not a number");
     }
 
   }
