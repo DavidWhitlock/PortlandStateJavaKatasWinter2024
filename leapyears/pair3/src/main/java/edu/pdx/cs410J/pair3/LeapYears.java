@@ -19,8 +19,15 @@ public class LeapYears {
     return year > 1582;
   }
 
-  public static boolean isLeapYear() {
-    throw new IllegalArgumentException();
+  public static boolean isLeapYear(int year) {
+    if (year < 0){
+      throw new IllegalArgumentException();
+    }
+    if (usesGregorianCalendar(year)){
+      return year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
+    } else {
+      return year % 4 == 0;
+    }
   }
 }
 
