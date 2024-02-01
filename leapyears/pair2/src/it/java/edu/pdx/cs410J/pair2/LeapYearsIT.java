@@ -15,6 +15,18 @@ class LeapYearsIT extends InvokeMainTestCase {
   }
 
   @Test
+  void invokingMainWithCorrectArgumentsPrintsLeapYear() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, "4");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("Leap Year"));
+  }
+
+  @Test
+  void invokingMainWithCorrectArgumentsPrintsNonLeapYear() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, "2018");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("Non Leap Year"));
+  }
+
+  @Test
   void invokingMainWithTooManyArgumentsPrintsTooManyArgumentsToStandardError() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, "2000", "2000");
     assertThat(result.getTextWrittenToStandardError(), containsString("Too many arguments!"));

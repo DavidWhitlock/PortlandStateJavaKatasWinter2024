@@ -18,6 +18,9 @@ public class LeapYears {
     if(args.length>1) {
       System.err.println("Too many arguments!");
     }
+
+    String result = leapYear(Integer.valueOf(args[0]));
+    System.out.println(result);
   }
 
 
