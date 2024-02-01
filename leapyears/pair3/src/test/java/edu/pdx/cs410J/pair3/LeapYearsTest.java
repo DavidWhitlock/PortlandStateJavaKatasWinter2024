@@ -71,4 +71,17 @@ public class LeapYearsTest
   void year2008IsLeapYear(){
     assertTrue(LeapYears.isLeapYear(2008));
   }
+
+  @Test
+  void year2018IsLeapYear(){
+    assertFalse(LeapYears.isLeapYear(2018));
+  }
+  @Test
+  void year2017IsLeapYear(){
+    assertFalse(LeapYears.isLeapYear(2017));
+  }
+  @Test
+  void year2019IsLeapYear(){
+    assertFalse(LeapYears.isLeapYear(2019));
+  }
 }
