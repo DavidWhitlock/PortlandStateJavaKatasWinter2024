@@ -14,5 +14,9 @@ class LeapYearsIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
   }
 
-
+  @Test
+  void invokingMainWithTooManyArgumentsPrintsTooManyArgumentsToStandardError() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, "2000", "2000");
+    assertThat(result.getTextWrittenToStandardError(), containsString("Too many arguments!"));
+  }
 }

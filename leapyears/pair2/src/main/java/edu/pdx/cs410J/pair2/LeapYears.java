@@ -12,7 +12,12 @@ public class LeapYears {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    if(args.length==0) {
+      System.err.println("Missing command line arguments");
+    }
+    if(args.length>1) {
+      System.err.println("Too many arguments!");
+    }
   }
 
 
