@@ -17,9 +17,17 @@ public class LeapYears {
     System.err.println("Missing command line arguments");
   }
 
-  public static void leapYears(int year) {
+  public static String leapYears(int year) {
     if (year <= 0) {
       throw new IllegalArgumentException("Year was less than 0");
     }
+    if (year % 400 == 0)
+      return "Leap";
+
+    if (year % 100 == 0 && year % 400 != 0)
+      return "Not Leap";
+
+    return null;
+
   }
 }
