@@ -17,8 +17,26 @@ public class FizzBuzzTest
   }
 
   @Test
-  void aNumberOf99IsOkay() {
-    int number = 99;
+  void aNumberOfMinus1IsTooSmall() {
+    int number = -1;
+    IllegalArgumentException ex =
+      assertThrows(IllegalArgumentException.class,
+      () -> FizzBuzz.fizzBuzz(number));
+    assertThat(ex.getMessage(), equalTo("Number is too small"));
+  }
+
+  @Test
+  void aNumberOf101IsTooBig() {
+    int number = 101;
+    IllegalArgumentException ex =
+      assertThrows(IllegalArgumentException.class,
+      () -> FizzBuzz.fizzBuzz(number));
+    assertThat(ex.getMessage(), equalTo("Number is too large"));
+  }
+
+  @Test
+  void aNumberOf100IsOkay() {
+    int number = 100;
     FizzBuzz.fizzBuzz(number);
   }
 
