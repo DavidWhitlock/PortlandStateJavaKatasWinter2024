@@ -33,10 +33,10 @@
       <timezone>-7</timezone>
     </developer>
     <developer>
-      <id>student1</id>
-      <name>Your name here</name>
+      <id>chier</id>
+      <name>John Chierichetti</name>
       <roles>
-        <role>Choose Driver or Navigator for your initial pairing role</role>
+        <role>Navigator</role>
       </roles>
     </developer>
     <developer>
