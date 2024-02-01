@@ -17,6 +17,7 @@ public class LeapYearsTest
   @Test
   void enter400returnTrue() {
       int number = 400;
-      assertThat(LeapYearCalc., equalTo("Number is too large"));
+      //LeapObject = new LeapYearCalc(number);
+      assertThat(LeapYearCalc.leapYear(number), equalTo("Leap Year"));
     }
 }
