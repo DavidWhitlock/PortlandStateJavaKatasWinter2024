@@ -6,8 +6,14 @@ public class LeapYearsTest
 {
   @Test
   void numberLessThan0PrintsErrorToStandardError() {
-  int number = -1;
-  assertThrows(IllegalArgumentException.class, () -> LeapYears.leapyears());
+    int number = -1;
+    assertThrows(IllegalArgumentException.class, () -> LeapYears.leapYears(number));
+  }
+
+  @Test
+  void year2000IsOkay() {
+    int year = 2000;
+    LeapYears.leapYears(year);
   }
 
   @Test
