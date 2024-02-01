@@ -17,6 +17,9 @@ public class LeapYears {
 
 
   public static String leapYear(int number) {
+    if(number % 4 == 0 && number % 100 > 0){
+      return "Leap Year";
+    }
     if(number % 400 == 0) {
       return "Leap Year";
     }

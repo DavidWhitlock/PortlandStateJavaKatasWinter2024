@@ -38,4 +38,24 @@ public class LeapYearsTest
         //LeapObject = new LeapYearCalc(number);
         assertThat(LeapYears.leapYear(number), equalTo("Leap Year"));
     }
+    @Test
+    void enter1700returnNonLeap() {
+        int number = 1700;
+        //LeapObject = new LeapYearCalc(number);
+        assertThat(LeapYears.leapYear(number), equalTo("Non Leap Year"));
+    }
+
+    @Test
+    void enter4returnLeap() {
+        int number = 4;
+        //LeapObject = new LeapYearCalc(number);
+        assertThat(LeapYears.leapYear(number), equalTo("Leap Year"));
+    }
+
+    @Test
+    void enter2019returnNonLeap() {
+        int number = 2019;
+        //LeapObject = new LeapYearCalc(number);
+        assertThat(LeapYears.leapYear(number), equalTo("Non Leap Year"));
+    }
 }
