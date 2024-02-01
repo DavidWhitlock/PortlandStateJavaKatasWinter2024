@@ -14,4 +14,13 @@ public class LeapYears {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  public static boolean usesGregorianCalendar(int year) {
+    return year > 1582;
+  }
+
+  public static boolean isLeapYear() {
+    throw new IllegalArgumentException();
+  }
 }
+
