@@ -14,4 +14,12 @@ public class FizzBuzz {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  public static String fizzBuzz(int number) {
+    if (number > 100) {
+      throw new IllegalArgumentException("Number is too large");
+    }
+
+    return null;
+  }
 }
