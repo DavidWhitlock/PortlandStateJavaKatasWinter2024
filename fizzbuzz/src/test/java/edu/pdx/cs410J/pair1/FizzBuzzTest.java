@@ -39,6 +39,21 @@ public class FizzBuzzTest
     assertThat(FizzBuzz.fizzBuzz(10), equalTo("Buzz"));
   }
   @Test
+  void Number1Return1() {
+    assertThat(FizzBuzz.fizzBuzz(1), equalTo("1"));
+  }
+
+  @Test
+  void Number2Return2() {
+    assertThat(FizzBuzz.fizzBuzz(2), equalTo("2"));
+  }
+
+  @Test
+  void Number15ReturnFizzBuzz() {
+    assertThat(FizzBuzz.fizzBuzz(15), equalTo("FizzBuzz"));
+  }
+
+  @Test
   void canInstantiateKataClass() {
     new FizzBuzz();
   }
