@@ -29,10 +29,16 @@ public class LeapYearsTest
     int year = 300;
     assertThat(LeapYears.leapYears(year), equalTo("Not Leap"));
   }
-@Test
+  @Test
   void year16isALeapYear(){
     int year = 16;
     assertThat(LeapYears.leapYears(year), equalTo("Leap"));
+  }
+
+  @Test
+  void year317isNotALeapYear() {
+    int year = 317;
+    assertThat(LeapYears.leapYears(year), equalTo("Not Leap"));
   }
 
   @Test
