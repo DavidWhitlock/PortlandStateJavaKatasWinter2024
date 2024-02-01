@@ -33,15 +33,15 @@
       <timezone>-7</timezone>
     </developer>
     <developer>
-      <id>student1</id>
-      <name>Your name here</name>
+      <id>chier</id>
+      <name>John Chierichetti</name>
       <roles>
-        <role>Choose Driver or Navigator for your initial pairing role</role>
+        <role>Navigator</role>
       </roles>
     </developer>
     <developer>
       <id>student2</id>
-      <name>Your name here</name>
+      <name>Benjamin Lutz</name>
       <roles>
         <role>Choose Driver or Navigator for your initial pairing role</role>
       </roles>
@@ -69,9 +69,9 @@
     </developer>
     <developer>
       <id>student6</id>
-      <name>Your name here</name>
+      <name>Katie Loveland</name>
       <roles>
-        <role>Choose Driver or Navigator for your initial pairing role</role>
+        <role>Driver</role>
       </roles>
     </developer>
     <developer>
@@ -83,9 +83,9 @@
     </developer>
     <developer>
       <id>student8</id>
-      <name>Your name here</name>
+      <name>Nora</name>
       <roles>
-        <role>Choose Driver or Navigator for your initial pairing role</role>
+        <role>Driver</role>
       </roles>
     </developer>
   </developers>
