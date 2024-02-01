@@ -15,11 +15,15 @@ public class LeapYears {
     System.err.println("Missing command line arguments");
   }
 
-  public static String LeapYearCalc(int number){
+
+  public static String leapYear(int number) {
+    if(number % 4 == 0 && number % 100 > 0){
+      return "Leap Year";
+    }
     if(number % 400 == 0) {
       return "Leap Year";
     }
-    return "Empty";
+    return "Non Leap Year";
 
   }
 }
