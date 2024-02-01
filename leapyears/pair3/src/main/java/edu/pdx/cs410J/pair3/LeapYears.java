@@ -12,7 +12,18 @@ public class LeapYears {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    if (args.length == 0) {
+      System.err.println("Missing command line arguments");
+      return;
+    }
+
+    Integer year = Integer.parseInt(args[0]);
+    if (year != null) {
+      if(isLeapYear(year)) {
+        System.out.println("Is a Leap Year!");
+      }
+    }
+
   }
 
   public static boolean usesGregorianCalendar(int year) {
