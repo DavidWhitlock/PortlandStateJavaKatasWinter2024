@@ -4,6 +4,8 @@ import com.google.common.annotations.VisibleForTesting;
 
 import javax.management.InvalidAttributeValueException;
 
+import static java.lang.Integer.parseInt;
+
 /**
  * A class for getting started with a code kata
  *
@@ -15,6 +17,8 @@ public class LeapYears {
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
+
+    System.out.println(leapYears(Integer.parseInt(args[0])));
   }
 
   public static String leapYears(int year) {

@@ -17,7 +17,13 @@ class LeapYearsIT extends InvokeMainTestCase {
   @Test
   void invokingMainYear2000PrintsLeapYear() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, "2000");
-    assertThat(result.getTextWrittenToStandardError(), containsString("Leap"));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("Leap"));
+  }
+
+  @Test
+  void invokingMainYear317isNotALeapYear() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, "317");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("Not Leap"));
   }
 
 
