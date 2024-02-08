@@ -16,14 +16,23 @@ public class LeapYears {
       System.err.println("Missing command line arguments");
       return;
     }
-
+    if (args.length > 1)
+    {
+      System.err.println("Too many arguments!");
+      return;
+    }
     try {
-      Integer year = Integer.parseInt(args[0]);
+      int year = Integer.parseInt(args[0]);
       if(isLeapYear(year)) {
         System.out.println("Is a Leap Year!");
       }
+      else {
+        System.out.println("Is not a Leap Year!");
+      }
     } catch (NumberFormatException e){
       System.err.println("Not a number");
+    } catch (IllegalArgumentException e){
+      System.err.println("Year cannot be negative!");
     }
 
   }
@@ -36,7 +45,7 @@ public class LeapYears {
     if (year < 0){
       throw new IllegalArgumentException();
     }
-    if (usesGregorianCalendar(year)){
+    if (usesGregorianCalendar(year)) {
       return year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
     } else {
       return year % 4 == 0;
