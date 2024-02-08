@@ -14,7 +14,7 @@
 
   <modules>
 <!--    <module>pair1</module>-->
-<!--    <module>pair2</module>-->
+    <module>pair2</module>
     <module>pair3</module>
     <module>pair4</module>
     <module>pair5</module>
