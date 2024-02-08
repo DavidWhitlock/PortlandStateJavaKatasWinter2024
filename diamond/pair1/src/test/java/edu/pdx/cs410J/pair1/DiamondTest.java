@@ -20,7 +20,6 @@ public class DiamondTest
 
   }
 
-
   @Test
   void invalidArgument(){
     String argument = "!";
@@ -28,5 +27,8 @@ public class DiamondTest
       Diamond.diamond(argument);
     });
   }
+
+  @Test
+  void
 
 }

@@ -22,7 +22,14 @@ public class Diamond {
       throw new IllegalArgumentException("Error: Argument is not of length 1");
     }
 
+    letter = letter.toUpperCase();
+    char ch = letter.charAt(0);
+    if (ch < 'A' || ch > 'Z') {
+      throw new IllegalArgumentException("Invalid character");
+    }
 
+    int preSpace = 0;
+    int space = 0;
 
 
   }
