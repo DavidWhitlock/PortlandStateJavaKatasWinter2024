@@ -11,6 +11,17 @@ public class DiamondTest
   }
 
   @Test
+  void invalidStringLengthThrowsException(){
+    String argument = "AA";
+
+    Assertions.assertThrows(IllegalArgumentException.class, () -> {
+      Diamond.diamond(argument);
+    });
+
+  }
+
+
+  @Test
   void invalidArgument(){
     String argument = "!";
     Assertions.assertThrows(IllegalArgumentException.class, () -> {

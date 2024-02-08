@@ -18,6 +18,12 @@ public class Diamond {
   }
 
   public static void diamond(String letter) {
+    if (letter.length() != 1){
+      throw new IllegalArgumentException("Error: Argument is not of length 1");
+    }
+
+
+
 
   }
 }
