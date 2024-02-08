@@ -28,6 +28,7 @@ accordingly
     <module>leapyears</module>
     <module>diamond</module>
     <module>lags</module>
+    <module>GildedRose</module>
   </modules>
 
   <inceptionYear>2024</inceptionYear>
