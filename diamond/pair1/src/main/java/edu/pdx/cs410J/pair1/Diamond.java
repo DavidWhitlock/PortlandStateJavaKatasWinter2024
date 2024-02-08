@@ -31,6 +31,11 @@ public class Diamond {
     int preSpace = 0;
     int space = 0;
 
+    preSpace = ch - 'A';
+    //space =
+    char[] charArray = new char[2 * (ch - 'A') + 1];
+
+    //for (int i = 'A', )
 
   }
 }
