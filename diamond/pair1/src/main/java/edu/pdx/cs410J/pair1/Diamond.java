@@ -2,6 +2,8 @@ package edu.pdx.cs410J.pair1;
 
 import com.google.common.annotations.VisibleForTesting;
 
+import java.util.Arrays;
+
 /**
  * A class for getting started with a code kata
  *
@@ -35,7 +37,11 @@ public class Diamond {
     //space =
     char[] charArray = new char[2 * (ch - 'A') + 1];
 
-    //for (int i = 'A', )
+    Arrays.fill(charArray, ' ');
+
+    int mid = ch - 'A';
+
+    charArray[mid] = 'A';
 
   }
 }
