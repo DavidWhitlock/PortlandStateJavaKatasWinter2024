@@ -29,6 +29,7 @@ accordingly
     <module>diamond</module>
     <module>lags</module>
     <module>GildedRose</module>
+    <module>ocr</module>
   </modules>
 
   <inceptionYear>2024</inceptionYear>
