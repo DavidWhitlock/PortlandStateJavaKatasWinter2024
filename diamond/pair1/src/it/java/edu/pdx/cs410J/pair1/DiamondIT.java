@@ -9,6 +9,10 @@ import static org.hamcrest.core.StringContains.containsString;
 class DiamondIT extends InvokeMainTestCase {
 
   @Test
+  void commandLineEmptyPrintsError() {
+    InvokeMainTestCase.MainMethodResult result = this.invokeMain(Diamond.class, new String[0]);
+  }
+  @Test
   void invokingMainWithNoArgumentsPrintsMissingArgumentsToStandardError() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class);
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
