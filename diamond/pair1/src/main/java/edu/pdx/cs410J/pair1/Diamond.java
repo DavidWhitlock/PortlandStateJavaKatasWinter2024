@@ -17,6 +17,7 @@ public class Diamond {
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
+    diamond(args[0]);
   }
 
   public static void diamond(String letter) {
@@ -40,8 +41,19 @@ public class Diamond {
     Arrays.fill(charArray, ' ');
 
     int mid = ch - 'A';
+    int minus1 = mid;
+    int plus1 = mid;
+    char pyramidLetter = 'A';
 
-    charArray[mid] = 'A';
+    while (minus1 != 0) {
+      charArray[minus1] = pyramidLetter;
+      charArray[plus1] = pyramidLetter;
+      minus1--;
+      plus1++;
+      pyramidLetter++;
+    }
+    System.out.println(charArray);
+
 
   }
 }
