@@ -30,7 +30,7 @@ class DiamondIT extends InvokeMainTestCase {
             "    C   C\n" +
             "     B B\n" +
             "      A";
-    assertThat(assertThat(result.getTextWrittenToStandardOut(), containsString(diamond)));
+    assertThat(result.getTextWrittenToStandardOut(), containsString(diamond));
   }
 
 
