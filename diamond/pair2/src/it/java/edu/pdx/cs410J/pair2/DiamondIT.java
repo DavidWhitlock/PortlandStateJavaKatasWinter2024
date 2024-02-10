@@ -17,7 +17,7 @@ class DiamondIT extends InvokeMainTestCase {
   @Test
   void gDiamondValid() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class,"g");
-    assertThat(assertThat(result.getTextWrittenToStandardError(), containsString("      A\n" +
+    String diamond = "      A\n" +
             "     B B\n" +
             "    C   C\n" +
             "   D     D\n" +
@@ -29,7 +29,8 @@ class DiamondIT extends InvokeMainTestCase {
             "   D     D\n" +
             "    C   C\n" +
             "     B B\n" +
-            "      A"));
+            "      A";
+    assertThat(assertThat(result.getTextWrittenToStandardOut(), containsString(diamond)));
   }
 
 

@@ -18,11 +18,16 @@ public class Diamond {
 
 
     //char temp_char = 'D';
-    char maxLetter = toUpperCase(args[0].charAt(0));
 
-    int middleSpace = outputTop(maxLetter);
-    outputBottom(maxLetter, middleSpace);
+    if (args[0].isEmpty()) {
+      System.err.println("Missing command line arguments");
 
+    }
+    else {
+      char maxLetter = toUpperCase(args[0].charAt(0));
+      int middleSpace = outputTop(maxLetter);
+      outputBottom(maxLetter, middleSpace);
+    }
   }
 
   public static int outputTop(char maxLetter){
