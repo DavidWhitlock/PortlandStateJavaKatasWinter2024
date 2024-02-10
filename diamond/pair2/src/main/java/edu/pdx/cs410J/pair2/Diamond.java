@@ -19,7 +19,7 @@ public class Diamond {
 
     //char temp_char = 'D';
 
-    if (args[0].isEmpty()) {
+    if (args.length==0) {
       System.err.println("Missing command line arguments");
 
     }
