@@ -23,8 +23,27 @@ public class LagsTest
 
   @Test
   void testFlightConflict() {
+
+    // overlap
+    // 2 to 7
     Flight flight = new Flight(2, 5, 10, "AF514");
+    // 5 to 11
     Flight flight2 = new Flight(5, 6, 10, "AF514");
     assertThat(flight.checkOverlap(flight2), equalTo(true));
+
+    // no overlap
+    // 2 to 3
+    flight = new Flight(2, 1, 10, "AF514");
+    // 4 to 6
+    flight2 = new Flight(4, 2, 10, "AF514");
+    assertThat(flight.checkOverlap(flight2), equalTo(false));
+
+    // 2 to 3
+    flight = new Flight(2, 1, 10, "AF514");
+    // 4 to 6
+    flight2 = new Flight(4, 2, 10, "AF514");
+    //assertThat(flight.checkOverlap(flight2), equalTo(true));
   }
+
+
 }
