@@ -3,6 +3,8 @@ package edu.pdx.cs410J.pair3;
 import com.google.common.annotations.VisibleForTesting;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 
 /**
  * A class for getting started with a code kata
@@ -17,8 +19,8 @@ public class Lags {
     System.err.println("Missing command line arguments");
   }
 
-  public void iterate(Requests[] requests){
-
-
+  public Requests[] sort(Requests[] requests){
+    Arrays.sort(requests);
+    return requests;
   }
 }

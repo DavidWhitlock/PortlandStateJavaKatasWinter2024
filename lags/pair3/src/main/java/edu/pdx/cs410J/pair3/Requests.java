@@ -2,7 +2,7 @@ package edu.pdx.cs410J.pair3;
 
 import java.util.Comparator;
 
-public class Requests implements Comparator<Requests> {
+public class Requests implements Comparable<Requests> {
 
 
     String plane;
@@ -42,7 +42,7 @@ public class Requests implements Comparator<Requests> {
     }
 
     @Override
-    public int compare(Requests o1, Requests o2) {
-        return o1.getEnd() - o2.getEnd();
+    public int compareTo(Requests o2) {
+        return this.getEnd() - o2.getEnd();
     }
 }
