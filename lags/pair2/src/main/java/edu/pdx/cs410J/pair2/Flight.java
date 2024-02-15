@@ -22,6 +22,20 @@ public class Flight {
     }
 
     public boolean checkOverlap(Flight otherFlight) {
+        int endTime = this.startTime + duration;
+        int endTimeOther = otherFlight.startTime + otherFlight.duration;
+        // check start time
+        if (this.startTime >= otherFlight.startTime && this.startTime <= endTimeOther){
+            return true;
+        } else if (endTime >= otherFlight.startTime && endTime <= endTimeOther){
+            return true;
+        }
+
         return false;
+
+
+//        if (otherFlight.startTime >= this.startTime || this.startTime <= endTimeOther){
+//
+//        }
     }
 }

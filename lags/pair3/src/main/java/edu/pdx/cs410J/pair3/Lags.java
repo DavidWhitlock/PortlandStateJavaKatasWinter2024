@@ -2,6 +2,8 @@ package edu.pdx.cs410J.pair3;
 
 import com.google.common.annotations.VisibleForTesting;
 
+import java.util.ArrayList;
+
 /**
  * A class for getting started with a code kata
  *
@@ -13,5 +15,10 @@ public class Lags {
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
+  }
+
+  public void iterate(Requests[] requests){
+
+
   }
 }

@@ -1,6 +1,10 @@
 package edu.pdx.cs410J.pair3;
 
-public class Requests {
+import java.util.Comparator;
+
+public class Requests implements Comparator<Requests> {
+
+
     String plane;
     int begin;
     int end;
@@ -35,5 +39,10 @@ public class Requests {
 
     public int getEnd() {
         return this.end;
+    }
+
+    @Override
+    public int compare(Requests o1, Requests o2) {
+        return o1.getEnd() - o2.getEnd();
     }
 }
