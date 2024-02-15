@@ -77,5 +77,14 @@ public class LagsTest
     flights.add(new Flight(6, 9, 8, "BA01"));
   }
 
+  @Test
+  void testCheckOverlap(){
+    //ArrayList<Flight> permutation = new ArrayList<>();
+
+    assertThat("there is an overlap", Lags.checkOverlap(flights));
+
+
+  }
+
 
 }

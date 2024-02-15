@@ -3,6 +3,7 @@ package edu.pdx.cs410J.pair2;
 import com.google.common.annotations.VisibleForTesting;
 
 import java.util.Collection;
+import java.util.List;
 
 /**
  * A class for getting started with a code kata
@@ -21,7 +22,15 @@ public class Lags {
 
     return 0;
   }
-  public boolean checkOverlap(Collection<Flight> flights) {
+  public static boolean checkOverlap(List<Flight> flights) {
+    boolean ans = false;
+    for (int i = 0; i < flights.size(); i++) {
+      for (int j = 0; j < flights.size(); j++) {
+        if (flights.get(i).checkOverlap(flights.get(j))){
+          return true;
+        }
+      }
+    }
     return false;
   }
 }
