@@ -63,7 +63,7 @@ class GildedRoseTest {
 
     @Test
     void backstagePassHasQualityOfZeroTheDayAfterSellIn() {
-        GildedRose app = updateQuality(new Item(BACKSTAGE_PASS, 0, 57));
+        GildedRose app = updateQuality(new Item(BACKSTAGE_PASS, 0, 50));
 
         Item item = app.items[0];
         assertThat(item.sellIn, equalTo(-1));
@@ -99,5 +99,24 @@ class GildedRoseTest {
         Item item = app.items[0];
         assertThat(item.sellIn, equalTo(0));
         assertThat(item.quality, equalTo(80));
+    }
+
+    @Test
+    void regularItemCanNotHaveNegativeQuality() {
+        GildedRose app = updateQuality(new Item("Regular Item", 0, 0));
+
+        Item item = app.items[0];
+        assertThat(item.sellIn, equalTo(-1));
+        assertThat(item.quality, equalTo(0));
+    }
+
+    @Test
+    void regularItemQualityDecreasesByOneOnDayOne() {
+        GildedRose app = updateQuality(new Item("Regular Item", 1, 4));
+
+        Item item = app.items[0];
+        assertThat(item.sellIn, equalTo(0));
+        assertThat(item.quality, equalTo(3));
+
     }
 }
