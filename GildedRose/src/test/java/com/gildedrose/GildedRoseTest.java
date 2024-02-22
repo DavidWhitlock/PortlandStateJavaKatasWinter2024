@@ -3,13 +3,12 @@ package com.gildedrose;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+import static com.gildedrose.GildedRose.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GildedRoseTest {
-
-    static final String AGED_BRIE = "Aged Brie";
 
     private static GildedRose updateQuality(Item item) {
         Item[] items = new Item[] {item};
@@ -64,7 +63,7 @@ class GildedRoseTest {
 
     @Test
     void backstagePassHasQualityOfZeroTheDayAfterSellIn() {
-        GildedRose app = updateQuality(new Item("Backstage passes to a TAFKAL80ETC concert", 0, 57));
+        GildedRose app = updateQuality(new Item(BACKSTAGE_PASS, 0, 57));
 
         Item item = app.items[0];
         assertThat(item.sellIn, equalTo(-1));
@@ -82,7 +81,7 @@ class GildedRoseTest {
 
     @Test
     void backstagePassIncreasesQualityByTwo10DaysBeforeSellIn() {
-        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 10, 20) };
+        Item[] items = new Item[] { new Item(BACKSTAGE_PASS, 10, 20) };
         GildedRose app = new GildedRose(items);
         for (int i = 1; i <= 5; i++) {
             app.updateQuality();
@@ -95,7 +94,7 @@ class GildedRoseTest {
 
     @Test
     void sulfurasNeverDecreasesInQuality() {
-        GildedRose app = updateQuality(new Item("Sulfuras, Hand of Ragnaros", 0, 80));
+        GildedRose app = updateQuality(new Item(SULFURAS, 0, 80));
 
         Item item = app.items[0];
         assertThat(item.sellIn, equalTo(0));
