@@ -30,6 +30,7 @@ accordingly
     <module>lags</module>
     <module>GildedRose</module>
     <module>Tennis</module>
+    <module>ocr</module>
   </modules>
 
   <inceptionYear>2024</inceptionYear>
