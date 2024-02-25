@@ -31,6 +31,7 @@ accordingly
     <module>GildedRose</module>
     <module>Tennis</module>
     <module>ocr</module>
+    <module>rpn</module>
   </modules>
 
   <inceptionYear>2024</inceptionYear>

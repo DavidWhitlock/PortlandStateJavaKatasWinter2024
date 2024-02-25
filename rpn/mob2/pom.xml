@@ -2,22 +2,33 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <artifactId>PortlandStateJavaKatasWinter2022</artifactId>
+    <artifactId>rpn-parent</artifactId>
     <groupId>edu.pdx.cs410J.katas</groupId>
     <version>1.0.0</version>
   </parent>
-  <groupId>edu.pdx.cs410J.mob</groupId>
-  <artifactId>Tennis</artifactId>
+  <groupId>edu.pdx.cs410J.mob2</groupId>
+  <artifactId>rpn</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>Kata Project</name>
-  <description>A simple project for getting started with code Tenniss</description>
+  <name>RPN Calculator Kata Mob 2</name>
+  <description>A simple project for getting started with code katas</description>
   <url>http://www.cs.pdx.edu</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
+  <developers>
+    <developer>
+      <id>student1</id>
+      <name>Student Name</name>
+    </developer>
+    <developer>
+      <id>student2</id>
+      <name>Student Name</name>
+    </developer>
+  </developers>
 
   <build>
     <plugins>
@@ -28,7 +39,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs410J.mob.Tennis</mainClass>
+              <mainClass>edu.pdx.cs410J.mob2.RPNCalculator</mainClass>
             </manifest>
           </archive>
         </configuration>
