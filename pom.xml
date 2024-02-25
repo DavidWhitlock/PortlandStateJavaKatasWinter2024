@@ -32,6 +32,7 @@ accordingly
     <module>Tennis</module>
     <module>ocr</module>
     <module>rpn</module>
+    <module>minesweeper</module>
   </modules>
 
   <inceptionYear>2024</inceptionYear>
