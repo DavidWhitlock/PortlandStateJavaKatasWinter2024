@@ -20,8 +20,24 @@ public class TennisTest
   }
 
   @Test
-  void zeroConvertToLove() {
+  void whenplayer1withScore0WinsPointScoreIs15() {
     Player player = new Player();
+    player.winsAPoint();
+
+    assertThat(player.getScore(), equalTo(15));
 
   }
+
+  @Test
+  void whenPLayerHas15pointsWinsAPointScoreis30(){
+    Player player = new Player();
+    player.winsAPoint();
+    player.winsAPoint();
+
+    assertThat(player.getScore(), equalTo(30));
+
+
+  }
+
+
 }
