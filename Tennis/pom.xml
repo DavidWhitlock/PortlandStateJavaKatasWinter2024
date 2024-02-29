@@ -36,6 +36,10 @@
       <id>cfarhan</id>
       <name>Cameron F</name>
     </developer>
+    <developer>
+      <id>amanda-gutierrez</id>
+      <name>Amanda Gutierrez</name>
+    </developer>
   </developers>
 
   <build>
