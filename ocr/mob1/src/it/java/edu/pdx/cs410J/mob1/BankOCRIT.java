@@ -14,5 +14,9 @@ class BankOCRIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
   }
 
+  @Test
+  void fileCanBeReadFromMain() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(BankOCR.class);
+  }
 
 }
