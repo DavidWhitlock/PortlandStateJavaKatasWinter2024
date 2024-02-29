@@ -105,7 +105,7 @@ public class BankOCRTest
     String num = "   \n" +
             "   \n" +
             "   \n";
-    assertThat(bankOCR.firstString(num), equalTo(null));
+    assertThat(bankOCR.firstString(num), equalTo("?"));
   }
 @Test
   void allzerostringreturns000000000(){
@@ -122,6 +122,56 @@ public class BankOCRTest
                    "  | _| _||_||_ |_   ||_||_|\n" +
                    "  ||_  _|  | _||_|  ||_| _|\n";
     assertThat(bankOCR.parseString(whole), equalTo("123456789"));
+  }
+
+  @Test
+  void checksum0is0() {
+    BankOCR bankOCR = new BankOCR();
+    String whole = " _  _  _  _  _  _  _  _  _ \n" +
+            "| || || || || || || || || |\n" +
+            "|_||_||_||_||_||_||_||_||_|\n";
+
+    assertThat(bankOCR.getChecksum(whole), equalTo(0));
+  }
+  @Test
+  void checksumSomeStringis0() {
+    BankOCR bankOCR = new BankOCR();
+    String whole = "    _  _     _  _  _  _  _ \n" +
+            "  | _| _||_||_ |_   ||_||_|\n" +
+            "  ||_  _|  | _||_|  ||_| _|\n";
+
+    assertThat(bankOCR.getChecksum(whole), equalTo(0));
+  }
+
+  @Test
+  void CheckFile() {
+    BankOCR bankOCR = new BankOCR();
+    String whole = "    _  _     _  _  _  _  _ \n" +
+                   "  | _| _||_||_ |_   ||_||_|\n" +
+                   "  ||_  _|  | _||_|  ||_| _|\n" +
+                   "                           \n" +
+                   "    _  _     _  _  _  _  _ \n" +
+                   "  | _| _||_||_ |_   ||_||_|\n" +
+                   "  ||_  _|  | _||_|  ||_|  |\n" +
+                   "                           \n";
+
+    assertThat(bankOCR.printFile(whole), equalTo("123456789\n12345678? ILL\n"));
+  }
+
+  @Test
+  void CheckFile2() {
+    BankOCR bankOCR = new BankOCR();
+    String whole =
+            "    _  _     _  _  _  _  _ \n" +
+            "  | _| _||_||_ |_   ||_||_|\n" +
+            "  ||_  _|  | _||_|  ||_| _|\n" +
+            "                           \n" +
+            " _  _     _  _        _  _ \n" +
+            "|_ |_ |_| _|  |  ||_||_||_ \n" +
+            "|_||_|  | _|  |  |  | _| _|\n" +
+            "                           \n";
+
+    assertThat(bankOCR.printFile(whole), equalTo("123456789\n664371495 ERR\n"));
   }
 
 }

@@ -58,7 +58,36 @@ public class BankOCR {
       return "9";
     }
     else {
-      return null;
+      return "?";
     }
+  }
+
+  public int getChecksum(String whole) {
+    String parsedString = parseString(whole);
+    int a = 0;
+    for(int i = 0; i < parsedString.length(); i++)
+    {
+      int charVal = Integer.parseInt(String.valueOf(parsedString.charAt(8 - i)));
+      a += charVal * (i + 1);
+    }
+    return a % 11;
+  }
+
+  public String printFile(String whole) {
+    String[] splitFile = whole.split("\n");
+    StringBuilder builder = new StringBuilder();
+    for(int i = 0; i < splitFile.length; i += 4)
+    {
+      String testString = splitFile[i] + "\n" + splitFile[i + 1] + "\n" + splitFile[i + 2];
+      String parsedString = parseString(testString);
+      if(parsedString.contains("?")) {
+        parsedString += " ILL";
+      } else if(getChecksum(testString) != 0) {
+        parsedString += " ERR";
+      }
+
+      builder.append(parsedString).append("\n");
+    }
+    return builder.toString();
   }
 }
