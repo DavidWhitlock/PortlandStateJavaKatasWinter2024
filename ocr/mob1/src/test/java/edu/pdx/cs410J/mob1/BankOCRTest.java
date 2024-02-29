@@ -21,5 +21,9 @@ public class BankOCRTest
     assertThat(digitOne.getNum(), equalTo(1));
   }
 
+  @Test
+  void canReadNineOnesInARow() {
+
+  }
 
 }

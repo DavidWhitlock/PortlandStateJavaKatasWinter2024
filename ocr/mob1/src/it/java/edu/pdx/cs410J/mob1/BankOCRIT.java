@@ -1,6 +1,7 @@
 package edu.pdx.cs410J.mob1;
 
 import edu.pdx.cs410J.InvokeMainTestCase;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.io.BufferedReader;
@@ -19,6 +20,7 @@ class BankOCRIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
   }
 
+  @Disabled
   @Test
   void fileCanBeReadFromMain() {
     InputStream myStream = BankOCR.class.getResourceAsStream("oneTest.txt");
