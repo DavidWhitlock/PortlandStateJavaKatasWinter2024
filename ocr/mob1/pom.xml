@@ -21,12 +21,12 @@
 
   <developers>
     <developer>
-      <id>benlutz</id>
-      <name>Benjamin</name>
-    </developer>
-    <developer>
       <id>chier</id>
       <name>John Chierichetti</name>
+    </developer>
+    <developer>
+      <id>benlutz</id>
+      <name>Benjamin</name>
     </developer>
     <developer>
       <id>cfarhan</id>
@@ -34,23 +34,11 @@
     </developer>
     <developer>
       <id>mobber4</id>
-      <name>Student Name</name>
-    </developer>
-    <developer>
-      <id>mobber4</id>
-      <name>Student Name</name>
-    </developer>
-    <developer>
-      <id>mobber6</id>
-      <name>Student Name</name>
+      <name>Amanda</name>
     </developer>
     <developer>
       <id>mobber7</id>
       <name>Nora Luna</name>
-    </developer>
-    <developer>
-      <id>mobber8</id>
-      <name>Student Name</name>
     </developer>
   </developers>
 
