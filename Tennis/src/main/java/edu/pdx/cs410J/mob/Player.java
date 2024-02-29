@@ -6,6 +6,9 @@ public class Player {
     public static final int CONSTANT_LOVE = 0;
 
     public Player(int score){
+        if (score != 0 && score != 15 && score != 30 && score != 40) {
+            throw new IllegalArgumentException("Unrecognized score: " + score);
+        }
         this.score = score;
     }
 

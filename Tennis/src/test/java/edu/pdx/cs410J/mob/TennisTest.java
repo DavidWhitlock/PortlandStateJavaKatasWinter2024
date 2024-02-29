@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class TennisTest
 {
@@ -45,5 +46,16 @@ public class TennisTest
     assertThat(player.getScore(), equalTo(40));
 
   }
-  
+
+  @Test
+  void unrecognizedScoreThrowsIllegalArgumentException() {
+    assertThrows(IllegalArgumentException.class, () -> { new Player(12); } );
+  }
+
+  @Test
+  void whenPlayerWhoHas40WinsAPointAnExceptionIsThrown() {
+    Player player = new Player(40);
+//    assertThrows();
+  }
+
 }
