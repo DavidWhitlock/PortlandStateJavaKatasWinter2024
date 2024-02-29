@@ -10,4 +10,10 @@ public class BankOCRTest
     new BankOCR();
   }
 
+  @Test
+  void arrayOneisOne(){
+    Digit digitOne = new Digit();
+    String[] oneArray = {"   ", "  |", "  |"};
+  }
+
 }
