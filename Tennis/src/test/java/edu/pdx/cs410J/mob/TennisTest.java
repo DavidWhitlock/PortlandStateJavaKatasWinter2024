@@ -30,14 +30,20 @@ public class TennisTest
 
   @Test
   void whenPLayerHas15pointsWinsAPointScoreis30(){
-    Player player = new Player();
-    player.winsAPoint();
+    Player player = new Player(15);
     player.winsAPoint();
 
     assertThat(player.getScore(), equalTo(30));
 
-
   }
 
+  @Test
+  void whenPLayerHas30pointsWinsAPointScoreis40(){
+    Player player = new Player(30);
+    player.winsAPoint();
 
+    assertThat(player.getScore(), equalTo(40));
+
+  }
+  
 }
