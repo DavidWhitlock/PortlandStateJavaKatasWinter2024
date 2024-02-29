@@ -15,14 +15,40 @@ public class BankOCR {
     System.err.println("Missing command line arguments");
   }
 
-  public int firstString(String zero) {
+  public String firstString(String zero) {
     String[] zeroArray = zero.split("\n");
     if (zeroArray[0].equals(" _ ") && zeroArray[1].equals("| |") && zeroArray[2].equals("|_|")) {
-      return 0;
+      return "0";
     }
     else if(zeroArray[0].equals("   ") && zeroArray[1].equals("  |") && zeroArray[2].equals("  |")){
-      return 1;
+      return "1";
     }
-    return -1;
+    else if(zeroArray[0].equals(" _ ") && zeroArray[1].equals(" _|") && zeroArray[2].equals("|_ ")){
+      return "2";
+    }
+    else if(zeroArray[0].equals(" _ ") && zeroArray[1].equals(" _|") && zeroArray[2].equals(" _|")){
+      return "3";
+    }
+    else if(zeroArray[0].equals("   ") && zeroArray[1].equals("|_|") && zeroArray[2].equals("  |")){
+      return "4";
+    }
+    else if(zeroArray[0].equals(" _ ") && zeroArray[1].equals("|_ ") && zeroArray[2].equals(" _|")){
+      return "5";
+    }
+    else if(zeroArray[0].equals(" _ ") && zeroArray[1].equals("|_ ") && zeroArray[2].equals("|_|")){
+      return "6";
+    }
+    else if(zeroArray[0].equals(" _ ") && zeroArray[1].equals("  |") && zeroArray[2].equals("  |")){
+      return "7";
+    }
+    else if(zeroArray[0].equals(" _ ") && zeroArray[1].equals("|_|") && zeroArray[2].equals("|_|")){
+      return "8";
+    }
+    else if(zeroArray[0].equals(" _ ") && zeroArray[1].equals("|_|") && zeroArray[2].equals(" _|")){
+      return "9";
+    }
+    else {
+      return null;
+    }
   }
 }
