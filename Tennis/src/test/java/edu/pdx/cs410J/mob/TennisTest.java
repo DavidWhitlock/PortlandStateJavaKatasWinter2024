@@ -16,7 +16,12 @@ public class TennisTest
   @Test
   void playerHasInitialScoreOfLove() {
     Player player = new Player();
-    assertThat(player.getScore(), equalTo(0));
+    assertThat(player.getScore(), equalTo(player.CONSTANT_LOVE));
   }
 
+  @Test
+  void zeroConvertToLove() {
+    Player player = new Player();
+
+  }
 }
