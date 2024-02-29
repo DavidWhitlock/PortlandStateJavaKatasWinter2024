@@ -19,6 +19,33 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
+  <developers>
+    <developer>
+      <id>mobber1</id>
+      <name>Student Name</name>
+    </developer>
+    <developer>
+      <id>mobber2</id>
+      <name>Student Name</name>
+    </developer>
+    <developer>
+      <id>mobber3</id>
+      <name>Student Name</name>
+    </developer>
+    <developer>
+      <id>mobber4</id>
+      <name>Student Name</name>
+    </developer>
+    <developer>
+      <id>mobber5</id>
+      <name>Student Name</name>
+    </developer>
+    <developer>
+      <id>mobber6</id>
+      <name>Student Name</name>
+    </developer>
+  </developers>
+
   <build>
     <plugins>
       <plugin>
