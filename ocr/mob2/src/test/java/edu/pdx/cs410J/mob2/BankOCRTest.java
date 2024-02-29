@@ -107,4 +107,21 @@ public class BankOCRTest
             "   \n";
     assertThat(bankOCR.firstString(num), equalTo(null));
   }
+@Test
+  void allzerostringreturns000000000(){
+    BankOCR bankOCR = new BankOCR();
+    String whole = " _  _  _  _  _  _  _  _  _ \n" +
+            "| || || || || || || || || |\n" +
+            "|_||_||_||_||_||_||_||_||_|\n";
+    assertThat(bankOCR.parseString(whole), equalTo("000000000"));
+  }
+  @Test
+  void variedstringreturnsrightstring(){
+    BankOCR bankOCR = new BankOCR();
+    String whole = "    _  _     _  _  _  _  _ \n" +
+                   "  | _| _||_||_ |_   ||_||_|\n" +
+                   "  ||_  _|  | _||_|  ||_| _|\n";
+    assertThat(bankOCR.parseString(whole), equalTo("123456789"));
+  }
+
 }

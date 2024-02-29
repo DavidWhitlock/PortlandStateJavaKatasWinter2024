@@ -15,6 +15,16 @@ public class BankOCR {
     System.err.println("Missing command line arguments");
   }
 
+  public String parseString(String whole_string) {
+    String[] threelines = whole_string.split("\n");
+    StringBuilder output = new StringBuilder();
+    for(int i = 0; i < threelines[0].length() ; i += 3)
+    {
+       String digit = threelines[0].substring(i,i+3) + "\n" + threelines[1].substring(i,i+3) + "\n" + threelines[2].substring(i,i+3) + "\n";
+       output.append(firstString(digit));
+    }
+    return output.toString();
+  }
   public String firstString(String zero) {
     String[] zeroArray = zero.split("\n");
     if (zeroArray[0].equals(" _ ") && zeroArray[1].equals("| |") && zeroArray[2].equals("|_|")) {
