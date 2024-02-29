@@ -25,24 +25,16 @@
       <name>Ben Lutz</name>
     </developer>
     <developer>
+      <id>sharon</id>
+      <name>Sharon</name>
+    </developer>
+    <developer>
       <id>chier</id>
       <name>John Chierichetti</name>
     </developer>
     <developer>
-      <id>benlutz</id>
-      <name>Sharon</name>
-    </developer>
-    <developer>
       <id>cfarhan</id>
       <name>Cameron F</name>
-    </developer>
-    <developer>
-      <id>mobber5</id>
-      <name>Student Name</name>
-    </developer>
-    <developer>
-      <id>mobber6</id>
-      <name>Student Name</name>
     </developer>
   </developers>
 
