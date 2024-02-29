@@ -21,11 +21,27 @@
 
   <developers>
     <developer>
-      <id>student1</id>
+      <id>mobber1</id>
       <name>Student Name</name>
     </developer>
     <developer>
-      <id>student2</id>
+      <id>mobber2</id>
+      <name>Student Name</name>
+    </developer>
+    <developer>
+      <id>mobber3</id>
+      <name>Student Name</name>
+    </developer>
+    <developer>
+      <id>mobber4</id>
+      <name>Student Name</name>
+    </developer>
+    <developer>
+      <id>mobber5</id>
+      <name>Student Name</name>
+    </developer>
+    <developer>
+      <id>mobber6</id>
       <name>Student Name</name>
     </developer>
   </developers>
