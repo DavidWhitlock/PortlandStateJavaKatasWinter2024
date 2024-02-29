@@ -30,4 +30,5 @@ public class BankOCRTest
             "  |\n";
     assertThat(bankOCR.firstString(one), equalTo(1));
   }
+
 }
