@@ -28,6 +28,10 @@
       <id>cfarhan</id>
       <name>Cameron Farhan</name>
     </developer>
+    <developer>
+      <id>nowen</id>
+      <name>Nathalie Owen</name>
+    </developer>
   </developers>
 
   <build>
