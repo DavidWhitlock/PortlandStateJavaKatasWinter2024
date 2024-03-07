@@ -15,7 +15,24 @@ public class RPNCalculator {
   private Stack<Integer> stack = new Stack<>();
   public RPNCalculator(String expression){
     String[] parsed = expression.split(" ");
+    for (int i =0; i < parsed.length; i++) {
+      String value = parsed[i];
+      if(value.equals("+")) {
+        Integer Operand1 = stack.pop();
+        Integer Operand2 = stack.pop();
+        stack.push(Operand1+Operand2);
+      }
+      else if(value.equals("-")) {
 
+      }
+      else if(value.equals("*")) {}
+      else if(value.equals("/")) {}
+      else {
+        Integer intvalue = Integer.parseInt(value);
+        stack.push(intvalue);
+      }
+
+    }
   }
   @VisibleForTesting
   public static void main(String[] args) {
@@ -23,6 +40,6 @@ public class RPNCalculator {
   }
 
   public int result() {
-    return 0;
+    return stack.pop();
   }
 }
