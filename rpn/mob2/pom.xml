@@ -21,6 +21,10 @@
 
   <developers>
     <developer>
+      <id>benlutz</id>
+      <name>Benjamin Lutz</name>
+    </developer>
+    <developer>
       <id>student1</id>
       <name>Nora Luna</name>
     </developer>
