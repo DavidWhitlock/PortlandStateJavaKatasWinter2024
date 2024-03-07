@@ -12,36 +12,34 @@ import java.util.Stack;
  */
 public class RPNCalculator {
 
-  private Stack<Integer> stack = new Stack<>();
+  private Stack<Double> stack = new Stack<>();
   public RPNCalculator(String expression){
-    String[] parsed = expression.split(" ");
-    for (int i =0; i < parsed.length; i++) {
-      String value = parsed[i];
-      if(value.equals("SQRT")) {
-          Integer Operand1 = stack.pop();
-          operation(Operand1, 0, value);
-      }
-      else if(value.equals("MAX")) {
-          Integer max = 0;
-          while(!stack.empty()) {
-              Integer val = stack.pop();
-              if(val>max) {
-                  max = val;
+      String[] parsed = expression.split(" ");
+      for (String value : parsed) {
+          if (value.equals("SQRT")) {
+              Double Operand1 = stack.pop();
+              operation(Operand1, 0, value);
+          } else if (value.equals("MAX")) {
+              if (stack.empty()) {
+                  throw new IllegalArgumentException("Missing Operands for max.");
               }
+              Double max = stack.pop();
+              while (!stack.empty()) {
+                  Double val = stack.pop();
+                  if (val > max) {
+                      max = val;
+                  }
+              }
+              stack.push(max);
+          } else if (isOperation(value)) {
+              Double Operand1 = stack.pop();
+              Double Operand2 = stack.pop();
+              operation(Operand1, Operand2, value);
+          } else {
+              Double intvalue = Double.parseDouble(value);
+              stack.push(intvalue);
           }
-          stack.push(max);
       }
-      else if(isOperation(value)) {
-        Integer Operand1 = stack.pop();
-        Integer Operand2 = stack.pop();
-        operation(Operand1, Operand2, value);
-      }
-      else {
-        Integer intvalue = Integer.parseInt(value);
-        stack.push(intvalue);
-      }
-
-    }
   }
   @VisibleForTesting
   public static void main(String[] args) {
@@ -53,7 +51,7 @@ public class RPNCalculator {
     return (operator.equals("+") || operator.equals("-") || operator.equals("*") || operator.equals("/") || operator.equals("SQRT"));
   }
 
-  private void operation(int Operand1, int Operand2, String Operation){
+  private void operation(double Operand1, double Operand2, String Operation){
       switch (Operation) {
           case "+":
               stack.push(Operand1 + Operand2);
@@ -68,13 +66,13 @@ public class RPNCalculator {
               stack.push(Operand2 / Operand1);
               break;
           case "SQRT":
-              stack.push((int) Math.sqrt(Operand1));
+              stack.push(Math.sqrt(Operand1));
               break;
       }
 
   }
 
-  public int result() {
+  public double result() {
     return stack.pop();
   }
 }
