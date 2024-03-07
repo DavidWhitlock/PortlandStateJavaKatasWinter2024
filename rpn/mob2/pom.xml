@@ -32,6 +32,10 @@
       <id>nowen</id>
       <name>Nathalie Owen</name>
     </developer>
+    <developer>
+      <id>student4</id>
+      <name>Aiden Russell</name>
+    </developer>
   </developers>
 
   <build>
