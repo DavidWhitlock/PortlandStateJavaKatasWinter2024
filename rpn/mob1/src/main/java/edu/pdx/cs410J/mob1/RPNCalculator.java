@@ -17,7 +17,21 @@ public class RPNCalculator {
     String[] parsed = expression.split(" ");
     for (int i =0; i < parsed.length; i++) {
       String value = parsed[i];
-      if(isOperation(value)) {
+      if(value.equals("SQRT")) {
+          Integer Operand1 = stack.pop();
+          operation(Operand1, 0, value);
+      }
+      else if(value.equals("MAX")) {
+          Integer max = 0;
+          while(!stack.empty()) {
+              Integer val = stack.pop();
+              if(val>max) {
+                  max = val;
+              }
+          }
+          stack.push(max);
+      }
+      else if(isOperation(value)) {
         Integer Operand1 = stack.pop();
         Integer Operand2 = stack.pop();
         operation(Operand1, Operand2, value);
@@ -54,7 +68,6 @@ public class RPNCalculator {
               stack.push(Operand2 / Operand1);
               break;
           case "SQRT":
-              stack.push(Operand2);
               stack.push((int) Math.sqrt(Operand1));
               break;
       }

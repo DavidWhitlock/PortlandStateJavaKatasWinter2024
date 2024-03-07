@@ -66,4 +66,17 @@ public class RPNCalculatorTest
 
     assertThat(rpn.result(), equalTo(3));
   }
+
+  @Test
+  void bunchOfNumbersForNegativeMax(){
+    RPNCalculator rpn = new RPNCalculator("-5 -10 -15 MAX");
+
+    assertThat(rpn.result(), equalTo(-5));
+  }
+  @Test
+  void bunchOfNumbersForMax(){
+    RPNCalculator rpn = new RPNCalculator("1 2 3 4 10 MAX");
+
+    assertThat(rpn.result(), equalTo(10));
+  }
 }
