@@ -14,14 +14,14 @@ class RPNCalculatorIT extends InvokeMainTestCase {
     InvokeMainTestCase.MainMethodResult result = invokeMain(RPNCalculator.class);
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
   }
+  @Test
+  void stringParserOutputsValidStrings() {
+    String RPN = "20 5 /";
+    Expression e = new Expression();
+    String[] actual = e.stringParser(RPN);
+    String[] expected = {"20", "5", "/"};
+    //assertThat(expected.equals(actual));
 
-//  @Test
-//  void stringParserOutputsValidStrings() {
-//    String RPN = "20 5 /";
-//    //String[] = stringParser(RPN);
-//
-//    //assertEquals()
-//
-//  }
+  }
 
 }
