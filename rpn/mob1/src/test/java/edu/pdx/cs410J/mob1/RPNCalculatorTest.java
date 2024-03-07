@@ -32,4 +32,31 @@ public class RPNCalculatorTest
 
   }
 
+  @Test
+  void NineTimesEightEquals72() {
+    RPNCalculator rpn = new RPNCalculator("9 8 *");
+
+    assertThat(rpn.result(), equalTo(72));
+  }
+
+  @Test
+  void seventytwoDevidedBy2is36() {
+    RPNCalculator rpn = new RPNCalculator("72 2 /");
+
+    assertThat(rpn.result(), equalTo(36));
+  }
+
+  @Test
+  void funkyTest() {
+    RPNCalculator rpn = new RPNCalculator("4 2 + 3 -");
+
+    assertThat(rpn.result(), equalTo(3));
+  }
+
+  @Test
+  void bigGuyTest() {
+    RPNCalculator rpn = new RPNCalculator("3 5 8 * 7 + *");
+
+    assertThat(rpn.result(), equalTo(141));
+  }
 }
