@@ -1,6 +1,7 @@
 package edu.pdx.cs410J.mob2;
 
 import edu.pdx.cs410J.InvokeMainTestCase;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -33,6 +34,14 @@ class RPNCalculatorIT extends InvokeMainTestCase {
     int num = e.calculate(20, 5, "/");
     assertEquals(num, 4);
 
+  }
+
+  @Test
+  @Disabled
+  void FourPlus2minus3equals3() {
+    String[] expected = {"4", "2", "+", "3", "-"};
+
+    Expression e = new Expression();
   }
 
 }
