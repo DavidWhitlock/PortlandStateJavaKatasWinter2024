@@ -32,6 +32,11 @@
       <id>student3</id>
       <name>Katie Loveland</name>
     </developer>
+    <developer>
+      <id>chier</id>
+      <name>John Chierichetti</name>
+    </developer>
+
   </developers>
 
   <build>
