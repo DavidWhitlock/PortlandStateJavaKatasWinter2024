@@ -59,4 +59,11 @@ public class RPNCalculatorTest
 
     assertThat(rpn.result(), equalTo(141));
   }
+
+  @Test
+  void sqrtOf9Is3(){
+    RPNCalculator rpn = new RPNCalculator("9 SQRT");
+
+    assertThat(rpn.result(), equalTo(3));
+  }
 }
