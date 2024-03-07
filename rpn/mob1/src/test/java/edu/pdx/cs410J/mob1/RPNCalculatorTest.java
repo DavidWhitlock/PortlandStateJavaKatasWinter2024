@@ -23,4 +23,13 @@ public class RPNCalculatorTest
     assertThat(rpn.result(), equalTo(17));
   }
 
+  @Test
+  void NineEightMinusGivesOne() {
+    String test = "9 8 -";
+    RPNCalculator rpn = new RPNCalculator(test);
+
+    assertThat(rpn.result(), equalTo(1));
+
+  }
+
 }
