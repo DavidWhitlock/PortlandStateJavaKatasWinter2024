@@ -9,6 +9,13 @@ import com.google.common.annotations.VisibleForTesting;
  * class (and its tests).
  */
 public class Minesweeper {
+  int row;
+  int col;
+
+  public Minesweeper(int row, int col) {
+    this.row = row;
+    this.col = col;
+  }
 
   @VisibleForTesting
   public static void main(String[] args) {
