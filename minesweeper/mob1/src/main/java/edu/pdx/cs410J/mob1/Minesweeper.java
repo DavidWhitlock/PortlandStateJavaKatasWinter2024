@@ -13,12 +13,14 @@ public class Minesweeper {
   int columns;
 
   private char[][] board;
+  private int[][] numberOfBombs;
   private int currentRow;
 
   public Minesweeper(int rows, int columns) {
     this.rows = rows;
     this.columns = columns;
-
+    this.currentRow = 0;
+    this.numberOfBombs = new int[rows][columns];
     this.board = new char[rows][columns];
   }
 
@@ -28,12 +30,18 @@ public class Minesweeper {
   }
 
   public void addRow(String row) {
-    currentRow = 0;
     this.board[currentRow] = row.toCharArray();
     currentRow++;
   }
 
   public void solve() {
+    for (int i = 0; i < rows; ++i) {
+      for (int j = 0; j < columns; ++j) {
+        if (board[i][j] == '*') {
+
+        }
+      }
+    }
 
   }
 

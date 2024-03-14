@@ -21,4 +21,22 @@ public class MinesweeperTest
     assertThat(minesweeper.getRow(0), equalTo("**"));
     assertThat(minesweeper.getRow(1), equalTo("**"));
   }
+
+  @Test
+  void input3x3dots() {
+    int col = 3;
+    int row = 3;
+
+    Minesweeper minesweeper = new Minesweeper(row, col);
+    assertThat(row, equalTo(minesweeper.rows));
+    assertThat(col, equalTo(minesweeper.columns));
+    minesweeper.addRow("...");
+    minesweeper.addRow("...");
+    minesweeper.addRow("...");
+    minesweeper.solve();
+    assertThat(minesweeper.getRow(0), equalTo("000"));
+    assertThat(minesweeper.getRow(1), equalTo("000"));
+    assertThat(minesweeper.getRow(2), equalTo("000"));
+  }
+
 }
