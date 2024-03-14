@@ -28,6 +28,10 @@
       <id>student2</id>
       <name>Nathalie Owen</name>
     </developer>
+    <developer>
+      <id>mobber3</id>
+      <name>David Whitlock</name>
+    </developer>
   </developers>
 
   <build>
