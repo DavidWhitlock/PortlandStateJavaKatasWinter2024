@@ -9,12 +9,17 @@ import com.google.common.annotations.VisibleForTesting;
  * class (and its tests).
  */
 public class Minesweeper {
-  int row;
-  int col;
+  int rows;
+  int columns;
 
-  public Minesweeper(int row, int col) {
-    this.row = row;
-    this.col = col;
+  private char[][] board;
+  private int currentRow;
+
+  public Minesweeper(int rows, int columns) {
+    this.rows = rows;
+    this.columns = columns;
+
+    this.board = new char[rows][columns];
   }
 
   @VisibleForTesting
@@ -23,7 +28,9 @@ public class Minesweeper {
   }
 
   public void addRow(String row) {
-
+    currentRow = 0;
+    this.board[currentRow] = row.toCharArray();
+    currentRow++;
   }
 
   public void solve() {
@@ -31,7 +38,6 @@ public class Minesweeper {
   }
 
   public String getRow(int row) {
-
-    return null;
+    return new String(this.board[row]);
   }
 }

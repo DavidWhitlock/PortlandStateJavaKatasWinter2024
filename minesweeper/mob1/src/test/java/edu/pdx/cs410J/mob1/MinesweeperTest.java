@@ -13,8 +13,8 @@ public class MinesweeperTest
     int row = 2;
 
     Minesweeper minesweeper = new Minesweeper(row, col);
-    assertThat(row, equalTo(minesweeper.row));
-    assertThat(col, equalTo(minesweeper.col));
+    assertThat(row, equalTo(minesweeper.rows));
+    assertThat(col, equalTo(minesweeper.columns));
     minesweeper.addRow("**");
     minesweeper.addRow("**");
     minesweeper.solve();
