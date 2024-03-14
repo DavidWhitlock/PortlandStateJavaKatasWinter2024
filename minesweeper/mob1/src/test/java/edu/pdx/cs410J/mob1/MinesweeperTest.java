@@ -7,7 +7,6 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class MinesweeperTest
 {
-
   @Test
   void input2x2stars() {
     int col = 2;
@@ -17,5 +16,4 @@ public class MinesweeperTest
     assertThat(row, equalTo(minesweeper.row));
     assertThat(col, equalTo(minesweeper.col));
   }
-
 }
