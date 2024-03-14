@@ -21,4 +21,17 @@ public class Minesweeper {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  public void addRow(String row) {
+
+  }
+
+  public void solve() {
+
+  }
+
+  public String getRow(int row) {
+
+    return null;
+  }
 }

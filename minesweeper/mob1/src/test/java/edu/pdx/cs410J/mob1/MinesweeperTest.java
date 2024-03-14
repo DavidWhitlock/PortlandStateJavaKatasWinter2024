@@ -15,5 +15,10 @@ public class MinesweeperTest
     Minesweeper minesweeper = new Minesweeper(row, col);
     assertThat(row, equalTo(minesweeper.row));
     assertThat(col, equalTo(minesweeper.col));
+    minesweeper.addRow("**");
+    minesweeper.addRow("**");
+    minesweeper.solve();
+    assertThat(minesweeper.getRow(0), equalTo("**"));
+    assertThat(minesweeper.getRow(1), equalTo("**"));
   }
 }
