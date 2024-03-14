@@ -38,11 +38,25 @@ public class Minesweeper {
     for (int i = 0; i < rows; ++i) {
       for (int j = 0; j < columns; ++j) {
         if (board[i][j] == '*') {
-
+          incrementNumberofBombs(i -1, j-1);
+          incrementNumberofBombs(i-1,j);
+          numberOfBombs[i-1][j+1]++;
+          numberOfBombs[i][j-1]++;
+          numberOfBombs[i][j] = -1;
+          numberOfBombs[i][j+1]++;
+          numberOfBombs[i+1][j-1]++;
+          numberOfBombs[i+1][j]++;
+          numberOfBombs[i+1][j+1]++;
         }
       }
     }
 
+  }
+
+  private void incrementNumberofBombs(int i, int j) {
+    if(i >= 0 && j >= 0 && i< rows && j < columns) {
+      numberOfBombs[i][j]++;
+    }
   }
 
   public String getRow(int row) {
