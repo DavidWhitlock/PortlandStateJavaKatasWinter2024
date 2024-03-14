@@ -39,4 +39,19 @@ public class MinesweeperTest
     assertThat(minesweeper.getRow(2), equalTo("000"));
   }
 
+  @Test
+  void example1FromKata() {
+
+    Minesweeper minesweeper = new Minesweeper(4, 4);
+    minesweeper.addRow("*...");
+    minesweeper.addRow("....");
+    minesweeper.addRow(".*..");
+    minesweeper.addRow("....");
+    minesweeper.solve();
+
+    assertThat(minesweeper.getRow(0), equalTo("*100"));
+    assertThat(minesweeper.getRow(1), equalTo("2210"));
+    assertThat(minesweeper.getRow(2), equalTo("1*10"));
+    assertThat(minesweeper.getRow(3), equalTo("1110"));
+  }
 }

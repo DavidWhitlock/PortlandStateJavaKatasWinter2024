@@ -40,13 +40,12 @@ public class Minesweeper {
         if (board[i][j] == '*') {
           incrementNumberofBombs(i -1, j-1);
           incrementNumberofBombs(i-1,j);
-          numberOfBombs[i-1][j+1]++;
-          numberOfBombs[i][j-1]++;
-          numberOfBombs[i][j] = -1;
-          numberOfBombs[i][j+1]++;
-          numberOfBombs[i+1][j-1]++;
-          numberOfBombs[i+1][j]++;
-          numberOfBombs[i+1][j+1]++;
+          incrementNumberofBombs(i-1, j+1);
+          incrementNumberofBombs(i, j-1);
+          incrementNumberofBombs(i, j+1);
+          incrementNumberofBombs(i+1, j-1);
+          incrementNumberofBombs(i+1, j);
+          incrementNumberofBombs(i+1, j+1);
         }
       }
     }
@@ -60,6 +59,20 @@ public class Minesweeper {
   }
 
   public String getRow(int row) {
-    return new String(this.board[row]);
+    char[] boardRow = this.board[row];
+    int[] numberOfBombsRows = this.numberOfBombs[row];
+
+    StringBuilder outputRow = new StringBuilder();
+
+    for (int i = 0; i < boardRow.length; i++) {
+      if (boardRow[i] == '*') {
+        outputRow.append('*');
+
+      } else {
+        outputRow.append(numberOfBombsRows[i]);
+      }
+    }
+
+    return outputRow.toString();
   }
 }
